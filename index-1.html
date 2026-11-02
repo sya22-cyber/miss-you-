@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090707">
+  <title>aku masih kangen kamu 🥀</title>
+  <style>
+    :root{--bg:#090707;--red:#d52a42;--muted:#b9a6a9;--text:#f5e9e9}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;min-height:100vh;color:var(--text);background:radial-gradient(ellipse at 50% 0%,rgba(130,18,37,.3),transparent 55%),linear-gradient(160deg,#10090b,var(--bg) 65%);font-family:Georgia,"Times New Roman",serif;overflow-x:hidden}
+    .rain,.rain:before,.rain:after{position:fixed;inset:0;pointer-events:none;z-index:0}
+    .rain{opacity:.2;background-image:repeating-linear-gradient(105deg,transparent 0 24px,rgba(220,210,215,.25) 25px,transparent 26px 54px);background-size:100% 160px;animation:rain 1.3s linear infinite}
+    .rain:before{content:"";opacity:.5;background-image:repeating-linear-gradient(105deg,transparent 0 40px,rgba(213,42,66,.25) 41px,transparent 42px 80px);animation:rain 2s linear infinite}
+    @keyframes rain{from{transform:translateY(-160px)}to{transform:translateY(160px)}}
+    .wrap{position:relative;z-index:1;width:min(760px,100%);margin:auto;padding:26px 17px 42px}
+    .topline{display:flex;justify-content:space-between;gap:10px;color:#c47a84;font:10px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase}
+    header{text-align:center;padding:66px 7px 32px}
+    .eyebrow{color:#d45c6d;font:11px Arial,sans-serif;letter-spacing:.3em;text-transform:uppercase;margin-bottom:19px}
+    h1{font-size:clamp(39px,9vw,70px);line-height:1.04;font-weight:400;letter-spacing:-.04em;margin:0;text-shadow:0 0 35px #d52a4230}
+    h1 em{color:var(--red);font-weight:400}
+    .subtitle{color:var(--muted);font-size:14px;font-style:italic;margin-top:19px}
+    .heart{color:var(--red);font-size:23px;margin-top:23px;animation:pulse 2s ease-in-out infinite}
+    @keyframes pulse{50%{transform:scale(1.16);opacity:.65}}
+    .music{background:rgba(31,12,16,.88);border:1px solid #8d1c2c80;border-radius:14px;padding:17px;margin:0 auto 22px;max-width:560px;box-shadow:0 10px 40px #0005}
+    .music-head{display:flex;align-items:center;gap:12px;margin-bottom:13px}
+    .album{width:44px;height:44px;flex:0 0 44px;display:grid;place-items:center;border-radius:8px;background:linear-gradient(135deg,#781628,#160b0d);font-size:22px;color:#f4c6ce}
+    .track{flex:1}.track strong{display:block;font:14px Arial,sans-serif}.track small{display:block;margin-top:5px;color:var(--muted);font:11px Arial,sans-serif}
+    .music-note{color:#d52a42;font-size:20px}
+    .player{position:relative;width:100%;aspect-ratio:16/9;background:#14090c;border-radius:9px;overflow:hidden}
+    .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .hint{font:11px/1.6 Arial,sans-serif;color:#b9a6a9;margin:10px 2px 0}
+    .letter{position:relative;padding:clamp(23px,6vw,42px);background:linear-gradient(145deg,rgba(31,16,19,.96),rgba(15,10,11,.97));border:1px solid #a62d3e47;border-radius:16px;box-shadow:0 20px 70px #0005}
+    .letter:before{content:"“";position:absolute;top:7px;left:18px;color:#d52a424d;font-size:65px;line-height:1}
+    .letter p{color:#e8d9dc;font-size:16px;line-height:1.95;margin:0 0 18px}
+    .letter p:last-child{margin-bottom:0}.letter .english{color:#d9a3ac;font-style:italic}
+    .divider{display:flex;align-items:center;gap:13px;margin:30px 0;color:#a55b66;font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+    .divider:before,.divider:after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,#63202b)}
+    .divider:after{transform:rotate(180deg)}
+    .ending{text-align:center;padding:8px 12px 28px}
+    .ending p{color:var(--muted);font-size:14px;line-height:1.8;font-style:italic}
+    .ending strong{display:block;margin-top:18px;color:#e5a0ab;font-size:17px;font-weight:400}
+    .btn{margin-top:14px;border:1px solid #742433;color:#f2cbd1;background:#1a0b0e;padding:12px 20px;border-radius:30px;font:12px Arial,sans-serif;letter-spacing:.08em;cursor:pointer}
+    .btn:hover,.btn:focus-visible{background:#45111b;outline:none;box-shadow:0 0 22px #58152266}
+    #secret{display:none;color:#e4b1ba;margin:18px auto 0;max-width:420px;line-height:1.8;font-style:italic}
+    footer{text-align:center;color:#6e5559;font:10px Arial,sans-serif;letter-spacing:.16em;margin-top:15px}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <div class="rain" aria-hidden="true"></div>
+  <main class="wrap">
+    <div class="topline"><span>midnight thoughts</span><span>02:17 AM <span style="color:#d52a42">●</span></span></div>
+
+    <header>
+      <div class="eyebrow">a letter i'll never send</div>
+      <h1>aku masih<br><em>kangen kamu.</em></h1>
+      <div class="subtitle">some memories never really leave.</div>
+      <div class="heart" aria-hidden="true">♥</div>
+    </header>
+
+    <section class="music" aria-label="Pemutar lagu YouTube">
+      <div class="music-head">
+        <div class="album">♫</div>
+        <div class="track"><strong>Haunting</strong><small>play this while reading my unsent letter</small></div>
+        <div class="music-note">♪</div>
+      </div>
+      <div class="player">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/yMmDY0GIG2g?playsinline=1&rel=0"
+          title="Pemutar lagu YouTube"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="hint">Kalau lagu belum mulai, tekan tombol ▶ di pemutar. Pastikan internet aktif.</p>
+    </section>
+
+    <article class="letter">
+      <p>gatau kenapa yaa, kadang aku masih suka kangen kamu tiba-tiba. kangen cara kita ngobrol, bercanda, cerita hal random, semuanya deh.</p>
+      <p>padahal sekarang kita udah ga kayak dulu lagi, bahkan buat sekadar nanya kabar aja rasanya asing banget. lucu yaa, dulu kamu jadi tempat aku cerita apa aja, sekarang malah jadi orang yang cuma bisa aku kangenin diam-diam.</p>
+      <p class="english">sometimes i still want to text you and tell you about my day, but then i remember that we're not together anymore.</p>
+      <p>kadang ada hal kecil yang bikin aku inget kamu. terus aku pengen cerita, sebelum akhirnya sadar kalau sekarang aku udah ga punya alasan buat nge-chat kamu lagi. soalnya kita udah bukan “kita” yang dulu.</p>
+      <p>aku gatau kamu masih pernah inget aku atau engga. mungkin kamu udah bahagia sama kehidupan kamu yang sekarang, sedangkan aku masih sesekali keinget hal-hal kecil tentang kita.</p>
+      <p>i don't regret meeting you, not even once. makasih yaa udah pernah jadi bagian dari hari-hari aku, udah pernah bikin aku sebahagia itu. kenangan kita mungkin udah lewat, tapi bukan berarti semuanya ga pernah berarti.</p>
+      <p>jujur, kalau ditanya masih sayang atau engga, mungkin jawabannya masih ada. cuma sekarang aku udah belajar kalau ga semua rasa harus punya akhir yang sama seperti yang kita mau.</p>
+      <p class="english">i miss you, but i know missing you doesn't mean i have to come back.</p>
+      <p>aku kangen, tapi aku juga sadar kita udah punya jalan masing-masing. jadi kalau suatu hari kamu tiba-tiba inget aku, semoga yang kamu inget cuma hal-hal baik, yaa.</p>
+      <p>semoga kamu bahagia terus. beneran. walaupun sekarang aku udah bukan bagian dari bahagia kamu. 🤍</p>
+    </article>
+
+    <div class="divider">things left unsaid</div>
+    <section class="ending">
+      <p>“mungkin kita cuma ditakdirkan buat saling kenal,<br>bukan buat saling menetap.”</p>
+      <button class="btn" id="secretBtn" type="button" aria-expanded="false">buka pesan kecil ♡</button>
+      <p id="secret">kalau kangen ini datang lagi, semoga aku bisa mengingatmu tanpa harus kembali. thank you for being a beautiful part of my story.</p>
+      <strong>take care, wherever you are.</strong>
+    </section>
+    <footer>MADE OF MEMORIES · NOT MEANT TO BE SENT</footer>
+  </main>
+  <script>
+    const button = document.getElementById('secretBtn');
+    const secret = document.getElementById('secret');
+    button.addEventListener('click', () => {
+      const isOpen = secret.style.display === 'block';
+      secret.style.display = isOpen ? 'none' : 'block';
+      button.textContent = isOpen ? 'buka pesan kecil ♡' : 'tutup pesan ♡';
+      button.setAttribute('aria-expanded', String(!isOpen));
+    });
+  </script>
+</body>
+</html>
